@@ -20,25 +20,9 @@ function formatContent(content: string) {
     ));
 }
 
-export default function ChapterReader({
-  chapter,
-  onBack,
-}: {
-  chapter: Chapter;
-  onBack: () => void;
-}) {
+export default function ChapterReader({ chapter }: { chapter: Chapter }) {
   return (
     <article className="animate-fade-in-up">
-      <button
-        onClick={onBack}
-        className="flex items-center gap-2 text-text-secondary hover:text-gold transition-colors mb-8 text-sm group"
-      >
-        <span className="group-hover:-translate-x-1 transition-transform">
-          &larr;
-        </span>
-        Все главы
-      </button>
-
       <header className="mb-10 pb-8 border-b border-gold/10">
         <span className="text-gold/50 text-sm tracking-[0.2em] uppercase">
           Глава {chapter.chapter_number}
